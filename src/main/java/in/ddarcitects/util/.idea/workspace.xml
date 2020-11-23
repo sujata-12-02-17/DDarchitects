@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="70685b71-e633-466d-a91d-2aaa10178afa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../daoImpl/BlogDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserController/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserController/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserController/UserEditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../UserController/UserEditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserController/UserUpdateController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dao/BlogDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dao/BlogDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../daoImpl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../daoImpl/UserDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/add-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/add-user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/blog-add-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/blog-add-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/blog-edit-form.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/blog-edit-form.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/display-users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/display-users.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/edit-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/edit-user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../webapp/update-user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../webapp/update-user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/logs/access_log.2020-11-04" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/logs/access_log.2020-11-05" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/logs/access_log.2020-11-06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/blogdetail_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/blogdetail_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/blogpage1_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/blogpage1_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/index_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/index_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/index_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../target/tomcat/work/Tomcat/localhost/ddarchitects/org/apache/jsp/index_jsp.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kCbcqGuTaRiFOvIPaGyNdodRK9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="70685b71-e633-466d-a91d-2aaa10178afa" name="Default Changelist" comment="" />
+      <created>1605207606036</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605207606036</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
