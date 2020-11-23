@@ -32,7 +32,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="<%=request.getContextPath() %>/users">List Blog</a>
-          <a class="dropdown-item" href="add-user.jsp">Add Blog</a>
+          <a class="dropdown-item" href="<%=request.getContextPath() %>/blogaddform">Add Blog</a>
         </div>
       </li>
     </ul>
@@ -51,6 +51,20 @@
                         <th>Publish</th>
                         <th>Edit</th>
                     </tr>
+
+                     <c:forEach var="blog" items="${blogs}">
+                                         <tr>
+                                            <td>${blog.id}</td>
+                                            <td>${blog.blogTitle}</td>
+                                            <td>${blog.shortText}</td>
+                                            <td>${blog.blogDescription}</td>
+                                            <td>${blog.isPublished}</td>
+
+
+                                            <td><a href="<%=request.getContextPath()%>/blogeditform?id=${blog.id}">edit</a></td>
+
+                                         </tr>
+                                     </c:forEach>
             </div>
         </table>
 

@@ -2,12 +2,15 @@ package in.ddarcitects.BlogController;
 
 import in.ddarcitects.dao.BlogDao;
 import in.ddarcitects.daoImpl.BlogDaoImpl;
+import in.ddarcitects.model.Blog;
+import in.ddarcitects.model.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 public class BlogViewController extends HttpServlet {
 
@@ -16,7 +19,10 @@ public class BlogViewController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        List<Blog> blogs =blogDao.findAllBlog();
 
+        req.setAttribute("blogs",blogs);
+        req.getRequestDispatcher("dashboard.jsp").forward(req,resp);
     }
 
     @Override

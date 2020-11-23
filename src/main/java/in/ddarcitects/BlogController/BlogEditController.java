@@ -24,8 +24,6 @@ public class BlogEditController  extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-
-
         }
 
 
@@ -41,7 +39,7 @@ public class BlogEditController  extends HttpServlet {
 
         }
         String blogTitle = req.getParameter("blogTitle");
-        String fectureImageUrl =  req.getParameter("fectureImageUrl");
+        String featureImageUrl =  req.getParameter("featureImageUrl");
         String blogDescription = req.getParameter("blogDescription");
         String shortText=req.getParameter("shortText");
         Long userId = Long.parseLong(req.getParameter("userId"));
@@ -49,7 +47,7 @@ public class BlogEditController  extends HttpServlet {
 
 
         blog.setBlogTitle(blogTitle);
-        blog.setFeatureImageUrl(fectureImageUrl);
+        blog.setFeatureImageUrl(featureImageUrl);
         blog.setBlogDescription(blogDescription);
         blog.setShortText(shortText);
         blog.setUserId(userId);

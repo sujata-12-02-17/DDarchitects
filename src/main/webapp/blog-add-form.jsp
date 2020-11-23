@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <title>dd-architects</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+    <%@ page isELIgnored="false" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>dd-architects</title>
 </head>
 <body style="background-color:#fff8db">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -22,8 +24,8 @@
             User
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="">List User</a>
-            <a class="dropdown-item" href="">Add User</a>
+            <a class="dropdown-item" href="<%=request.getContextPath() %>/users">List User</a>
+            <a class="dropdown-item" href="add-user.jsp">Add User</a>
           </div>
       </li>
       <li class="nav-item dropdown">
@@ -31,7 +33,7 @@
           Blog
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="">List Blog</a>
+          <a class="dropdown-item" href="<%=request.getContextPath() %>/blogs">List Blog</a>
           <a class="dropdown-item" href="blog-add-form.jsp">Add Blog</a>
         </div>
       </li>
@@ -72,6 +74,19 @@
                         <div class="form-group">
                             <label for="blog description">Blog Description</label>
                             <textarea class="form-control" id="blog description" rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Blogs Writers
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <c:forEach var="user" items="${users}">
+                                    <a class="dropdown-item" href="#">${user.fName}</a>
+                                </c:forEach>
+                              </div>
+                            </div>
+
                         </div>
                             <div class="form-group">
                             <input class="btn btn-primary" type="submit" value="Save">

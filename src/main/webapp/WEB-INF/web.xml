@@ -5,13 +5,5 @@
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
 
-  <servlet>
-    <servlet-name>blogaddform</servlet-name>
-    <servlet-class>in.ddarcitects.BlogController.BlogWriteController</servlet-class>
-  </servlet>
 
-  <servlet-mapping>
-    <servlet-name>blogaddform</servlet-name>
-    <url-pattern>blog/blogaddform</url-pattern>
-  </servlet-mapping>
 </web-app>

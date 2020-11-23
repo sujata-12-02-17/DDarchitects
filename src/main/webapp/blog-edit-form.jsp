@@ -33,8 +33,8 @@
           Blog
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="<%=request.getContextPath() %>/users">List Blog</a>
-          <a class="dropdown-item" href="add-user.jsp">Add Blog</a>
+          <a class="dropdown-item" href="<%=request.getContextPath() %>/blogs">List Blog</a>
+          <a class="dropdown-item" href="blog-add-form.jsp">Add Blog</a>
         </div>
       </li>
     </ul>
@@ -78,7 +78,7 @@
                             <textarea class="form-control" id="blog description" rows="5"></textarea>
                         </div>
                             <div class="form-group">
-                            <input class="btn btn-primary" type="save" value="Save">
+                            <input class="btn btn-primary" type="submit" value="edit">
                             </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
