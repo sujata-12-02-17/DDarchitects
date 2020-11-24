@@ -42,7 +42,7 @@
 </nav>
     <div class="container">
     <h1>Blog Detail Form </h1>
-         <form action="blog/blogaddform" method="post">
+         <form action="blogaddform" method="post">
         <div class="row">
              <div class="col-md-6 col-sm-12">
                 <div class="form-group">
@@ -54,18 +54,18 @@
                         <input type="file" class="form-control" id="feature-image">
                     </div>
                         <div class="file-path-wrapper">
-                        <img src=" " class="rounded float-right" alt="Responsive image" placeholder="Upload your image">
+                        <img src="assets/images/" class="rounded float-right" alt="Responsive image" placeholder="Upload your image">
                     </div>
 
                 </div>
 
                     <div class="form-group">
                         <label for="blog title">Blog Title:</label>
-                        <input type="blog title" class="form-control" id="blog title">
+                        <input type="text" name="blog-title" class="form-control" id="blog title">
                      </div>
                     <div class="form-group">
                         <label for="blog short text">Blog Short Text:</label>
-                        <input type="blog short text" class="form-control" id="blog short text">
+                         <input type="text" name="blog-short-text" class="form-control" id="blog-short">
                     </div>
 
                 </div>
@@ -73,21 +73,21 @@
 
                         <div class="form-group">
                             <label for="blog description">Blog Description</label>
-                            <textarea class="form-control" id="blog description" rows="5"></textarea>
+                            <textarea class="form-control" name="blog-description" id="blog description" rows="10"></textarea>
                         </div>
                         <div class="form-group">
                             <div class="dropdown">
-                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                               Blogs Writers
-                              </button>
-                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <c:forEach var="user" items="${users}">
-                                    <a class="dropdown-item" href="#">${user.fName}</a>
-                                </c:forEach>
-                              </div>
-                            </div>
+                                  <select id="Author" name="author">
 
+                                        <option>Select Author</option>
+                                        <c:forEach var="user" items="${users}">
+                                        <option value="${user.id}">${user.fName}</option>
+                                    </c:forEach>
+                                  </select>
+                            </div>
                         </div>
+
+
                             <div class="form-group">
                             <input class="btn btn-primary" type="submit" value="Save">
                             </div>

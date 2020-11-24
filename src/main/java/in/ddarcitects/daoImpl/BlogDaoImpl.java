@@ -19,13 +19,13 @@ public class BlogDaoImpl implements BlogDao {
         int flag = 0;
         if (con != null) {
             try {
-                PreparedStatement ps = con.prepareStatement("insert into blog (blogTitle,url,blogDescription,shortText,userid,isPublished)VALUES(?,?,?,?,?,?)");
+                PreparedStatement ps = con.prepareStatement("insert into blog (blogTitle,url,blogDescription,shortText,user_id,isPublished)VALUES(?,?,?,?,?,?)");
                 ps.setString(1, blog.getBlogTitle());
                 ps.setString(2, blog.getFeatureImageUrl());
                 ps.setString(3, blog.getBlogDescription());
                 ps.setString(4, blog.getShortText());
-                 ps.setLong(6,blog.getUserId());
-                ps.setString(7, "0");
+                 ps.setLong(5,blog.getUserId());
+                ps.setString(6, "0");
                 if (ps.executeUpdate() == 1) {
                     flag = 1;
                 }
@@ -49,7 +49,7 @@ public class BlogDaoImpl implements BlogDao {
         if (con != null) {
 
             try {
-                PreparedStatement ps = con.prepareStatement("update blog set blogTitle=?,url=?,blogDescription=?,shortText=? userId=? where id=?");
+                PreparedStatement ps = con.prepareStatement("update blog set blogTitle=?,url=?,blogDescription=?,shortText=? user_Id=? where id=?");
                 ps.setString(1, blog.getBlogTitle());
                 ps.setString(2, blog.getFeatureImageUrl());
                 ps.setString(3, blog.getBlogDescription());

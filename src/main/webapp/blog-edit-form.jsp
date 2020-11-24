@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <head>
         <meta charset="UTF-8"/>
+        <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+            <%@ page isELIgnored="false" %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <title>dd-architects</title>
@@ -34,7 +36,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="<%=request.getContextPath() %>/blogs">List Blog</a>
-          <a class="dropdown-item" href="blog-add-form.jsp">Add Blog</a>
+          <a class="dropdown-item" href="<%=request.getContextPath() %>/blogaddform">Add Blog</a>
         </div>
       </li>
     </ul>
