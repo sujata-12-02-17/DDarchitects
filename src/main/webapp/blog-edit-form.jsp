@@ -48,37 +48,48 @@
         <div class="row">
              <div class="col-md-6 col-sm-12">
 
-                 <div class="form-group">
-                     <input type="text" class="form-control" hidden>
-                 </div>
+
+
+                     <input type="text"  value="${blog.getId()}" name="blog-id"  hidden>
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label for="feature image" id="lblfeatureimage">Feature Image:</label>
-                        <input type="file" class="form-control" id="feature-image">
+                        <input type="file" name="feature-UrI-Image" class="form-control" id="feature-image">
                     </div>
                         <div class="file-path-wrapper">
-                        <img src=" " class="rounded float-right" alt="Responsive image" placeholder="Upload your image">
-                    </div>
+                            <img src=" " class="rounded float-right" alt="Responsive image" placeholder="Upload your image">
+                        </div>
 
                 </div>
 
                     <div class="form-group">
                         <label for="blog title">Blog Title:</label>
-                        <input type="blog title" class="form-control" id="blog title">
+                        <input type="blog title" name="blog-title" value="${blog.getBlogTitle()}"  class="form-control" id="blog title">
                      </div>
                     <div class="form-group">
                         <label for="blog short text">Blog Short Text:</label>
-                        <input type="blog short text" class="form-control" id="blog short text">
+                        <input type="blog short text" name="blog-short-text" value="${blog.getShortText()}" class="form-control" id="blog short text">
                     </div>
 
-                </div>
              </div>
+        </div>
 
                         <div class="form-group">
                             <label for="blog description">Blog Description</label>
-                            <textarea class="form-control" id="blog description" rows="5"></textarea>
+                            <textarea class="form-control" id="blog-description"  name="blog-description" value="${blog.getBlogDescription()}" rows="5"></textarea>
                         </div>
+                           <div class="form-group">
+                                                      <div class="dropdown">
+                                                            <select id="Author" name="author">
+
+                                                                  <option>Select Author</option>
+                                                                  <c:forEach var="user" items="${users}">
+                                                                  <option value="${user.id}">${user.fName}</option>
+                                                              </c:forEach>
+                                                            </select>
+                                                      </div>
+                                                  </div>
                             <div class="form-group">
                             <input class="btn btn-primary" type="submit" value="edit">
                             </div>

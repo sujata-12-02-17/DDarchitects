@@ -12,4 +12,6 @@ public interface BlogDao {
     void updateBlog(Blog blog);
     Blog findBlogByid(Long id);
     List<Blog> findAllBlog();
+    int CountBlog();
+
 }

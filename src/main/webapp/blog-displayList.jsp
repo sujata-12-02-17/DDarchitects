@@ -40,41 +40,36 @@
     </ul>
   </div>
 </nav>
-   <div class="container mt-4">
-   <div class="row">
-          <div class="col-md-3">
+   <div class="container">
+        <h1>Blog List</h1>
 
-           </div>
+        <table border="1" width="100%">
+           <div class="table-responsive">
+                    <tr>
+                        <th>Id</th>
+                        <th>Blog Title</th>
+                        <th>Blog Short Text</th>
+                        <th>Blog Description</th>
+                        <th>Publish</th>
+                        <th>Edit</th>
+                    </tr>
 
-       <div class="col-md-3 mr-2 ">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title"> User</h5>
-            <button type="button" class="btn btn-primary">
-              Count <span class="badge badge-light">${usersCount}</span>
-            </button>
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="<%=request.getContextPath() %>/users" class="card-link" >Read more....</a>
-            <a href="#" class="card-link">Views</a>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-3 ml-1">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Blog</h5>
-            <button type="button" class="btn btn-primary">
-              Count <span class="badge badge-light">${blogsCount}</span>
-            </button>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-           <a href="<%=request.getContextPath() %>/blogs" class="card-link" >Read more....</a>
-           <a href="#" class="card-link">Views</a>
-          </div>
-        </div>
-    </div>
-    <div class="col-md-3">
+                     <c:forEach var="blog" items="${blogs}">
+                                         <tr>
+                                            <td>${blog.id}</td>
+                                            <td>${blog.blogTitle}</td>
+                                            <td>${blog.shortText}</td>
+                                            <td>${blog.blogDescription}</td>
+                                            <td>${blog.isPublished}</td>
 
-               </div>
+
+                                            <td><a href="<%=request.getContextPath()%>/blogeditform?id=${blog.id}">edit</a></td>
+
+                                         </tr>
+                     </c:forEach>
+            </div>
+        </table>
+
 
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

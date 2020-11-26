@@ -154,6 +154,35 @@ public class UserDaoImpl  implements UserDao {
         }
         return users;
     }
+    @Override
+    public int CountUser() {
+        DbConnectionUtil dbConnectionUtil = new DbConnectionUtil();
+        Connection con = dbConnectionUtil.getConnection();
+        int userCount=0;
+        if(con!=null){
+            try{
 
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("select count(*) from user;");
+                while (rs.next()){
+                    userCount= rs.getInt(1);
+
+                }
+
+                con.close();
+            }catch (SQLException ex){
+                ex.printStackTrace();
+            }
+
+        }
+
+
+
+        return userCount;
     }
+
+
+
+}
+
 

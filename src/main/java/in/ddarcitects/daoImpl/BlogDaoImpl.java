@@ -47,9 +47,9 @@ public class BlogDaoImpl implements BlogDao {
         DbConnectionUtil dbConnectionUtil = new DbConnectionUtil();
         Connection con = dbConnectionUtil.getConnection();
         if (con != null) {
-
+            System.out.println("blog.getId().."+ blog.getId());
             try {
-                PreparedStatement ps = con.prepareStatement("update blog set blogTitle=?,url=?,blogDescription=?,shortText=? user_Id=? where id=?");
+                PreparedStatement ps = con.prepareStatement("update blog set blogTitle=?,url=?,blogDescription=?,shortText=?, user_Id=? where id=?");
                 ps.setString(1, blog.getBlogTitle());
                 ps.setString(2, blog.getFeatureImageUrl());
                 ps.setString(3, blog.getBlogDescription());
@@ -117,7 +117,7 @@ public class BlogDaoImpl implements BlogDao {
                 Statement st = con.createStatement();
                 ResultSet rs = st.executeQuery("SELECT * from blog");
                 while (rs.next()) {
-                    Blog blog = new Blog(rs.getLong("id"), rs.getString("blogTitle"), rs.getString("url"), rs.getString("blogDescription"),rs.getString("shortText"), rs.getLong("getUserId"), rs.getBoolean("isPublished"));
+                    Blog blog = new Blog(rs.getLong("id"), rs.getString("blogTitle"), rs.getString("url"), rs.getString("blogDescription"),rs.getString("shortText"), rs.getLong("user_Id"), rs.getBoolean("isPublished"));
                     blogs.add(blog);
                 }
 
@@ -129,6 +129,27 @@ public class BlogDaoImpl implements BlogDao {
             }
         }
         return blogs;
+    }
+
+    @Override
+    public int CountBlog() {
+        DbConnectionUtil dbConnectionUtil = new DbConnectionUtil();
+        Connection con = dbConnectionUtil.getConnection();
+        int blogCount=0;
+        if(con!=null){
+            try{
+
+                Statement st = con.createStatement();
+                ResultSet rs = st.executeQuery("select count(*) from blog;");
+                while (rs.next()){
+                    blogCount= rs.getInt(1);
+                }
+                con.close();
+            }catch (SQLException ex){
+                ex.printStackTrace();
+            }
+        }
+        return blogCount;
     }
 
 

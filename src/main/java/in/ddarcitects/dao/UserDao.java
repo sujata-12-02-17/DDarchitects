@@ -12,4 +12,5 @@ public interface UserDao {
     void deleteUser(Long id);
     User findUserById(Long id);
     List<User> findAllUser();
+    int CountUser();
 }

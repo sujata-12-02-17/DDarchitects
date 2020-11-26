@@ -90,7 +90,7 @@ public class Blog {
         this.userId = userId;
     }
 
-    public boolean isPublished() {
+    public boolean getisPublished() {
         return isPublished;
     }
 
