@@ -39,6 +39,12 @@
       </li>
     </ul>
   </div>
+   <div class="col-4 d-flex justify-content-end align-items-center">
+                  <a class="text-muted" href="#">
+                  <a class="btn btn-sm btn-outline-secondary" href="#"> LogOut</a>
+                  </a>
+
+                </div>
 </nav>
    <div class="container">
         <h1>Blog List</h1>

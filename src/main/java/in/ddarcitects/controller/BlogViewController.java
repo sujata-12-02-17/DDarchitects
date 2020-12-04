@@ -1,4 +1,4 @@
-package in.ddarcitects.BlogController;
+package in.ddarcitects.controller;
 
 import in.ddarcitects.dao.BlogDao;
 import in.ddarcitects.daoImpl.BlogDaoImpl;

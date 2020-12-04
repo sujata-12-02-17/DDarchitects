@@ -8,8 +8,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body style="background-color:#fff8db">
+<%
+    if (session.getAttribute("user")==null){
+        response.sendRedirect("login.jsp");
+    }
+%>
+<%--<%--%>
+<%--    String message = null;--%>
+<%--    String sessionID =  null;--%>
+
+<%--    Cookie[] cookies = request.getCookies();--%>
+<%--    if(cookies!=null){--%>
+<%--        for (Cookie cookie: cookies){--%>
+<%--//            if (cookie.getName().equals("message")) message = cookie.getValue();--%>
+<%--            if (cookie.getName().equals("JSESSIONID")) sessionID = cookie.getValue();--%>
+<%--        }--%>
+<%--    }--%>
+<%--%>--%>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">ddarchitects Blogs</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -38,7 +55,15 @@
         </div>
       </li>
     </ul>
+    <div class="col-4 d-flex justify-content-end align-items-center">
+                <h6 style="color: #FFF;">${user.firstName}</h6>
+                <a class="text-muted" href="#">
+                <a class="btn btn-sm btn-outline-secondary" href="<%=request.getContextPath() %>/logout"> LogOut</a>
+                </a>
+
+              </div>
   </div>
+
 </nav>
    <div class="container mt-4">
    <div class="row">

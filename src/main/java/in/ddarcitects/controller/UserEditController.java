@@ -1,4 +1,4 @@
-package in.ddarcitects.UserController;
+package in.ddarcitects.controller;
 
 import in.ddarcitects.dao.UserDao;
 import in.ddarcitects.daoImpl.UserDaoImpl;
@@ -38,8 +38,8 @@ public class UserEditController extends HttpServlet {
          user =userDao.findUserById(Long.parseLong(userId));
 
      }
-     String firstName = req.getParameter("fName");
-     String lastName =  req.getParameter("lName");
+     String firstName = req.getParameter("firstName");
+     String lastName =  req.getParameter("lastName");
      String email = req.getParameter("emailId");
         System.out.println(email);
      String password=req.getParameter("password");
@@ -47,8 +47,8 @@ public class UserEditController extends HttpServlet {
      boolean  isActive= req.getParameterMap().containsValue(1);
 
 
-        user.setfName(firstName);
-        user.setlName(lastName);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
         user.setUserRole(userRole);
         user.setIsActive(isActive);
         user.setEmailId(email);

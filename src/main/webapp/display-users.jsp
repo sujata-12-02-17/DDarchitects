@@ -20,7 +20,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<%=request.getContextPath() %>/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -42,6 +42,12 @@
       </li>
     </ul>
   </div>
+   <div class="col-4 d-flex justify-content-end align-items-center">
+                  <a class="text-muted" href="#">
+                  <a class="btn btn-sm btn-outline-secondary" href="#"> LogOut</a>
+                  </a>
+
+                </div>
 </nav>
     <h1>User List</h1>
 
@@ -64,8 +70,8 @@
                  <c:forEach var="user" items="${users}">
                      <tr>
                         <td>${user.id}</td>
-                        <td>${user.fName}</td>
-                        <td>${user.lName}</td>
+                        <td>${user.firstName}</td>
+                        <td>${user.lastName}</td>
                         <td>${user.emailId}</td>
                         <td>${user.password}</td>
                         <td>${user.userRole}</td>

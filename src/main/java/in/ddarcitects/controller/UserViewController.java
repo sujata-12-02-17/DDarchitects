@@ -1,4 +1,4 @@
-package in.ddarcitects.UserController;
+package in.ddarcitects.controller;
 
 import in.ddarcitects.dao.UserDao;
 import in.ddarcitects.daoImpl.UserDaoImpl;

@@ -1,4 +1,4 @@
-package in.ddarcitects.UserController;
+package in.ddarcitects.controller;
 
 import in.ddarcitects.dao.UserDao;
 import in.ddarcitects.daoImpl.UserDaoImpl;
@@ -30,8 +30,8 @@ public class UserRegistrationController extends HttpServlet {
 
 
 //            Long  userId= Long.parseLong(req.getParameter("id"));
-            String  firstName= req.getParameter("fName");
-            String  lastName= req.getParameter("lName");
+            String  firstName= req.getParameter("firstName");
+            String  lastName= req.getParameter("lastName");
             String  emailId= req.getParameter("emailId");
 
             String  password= req.getParameter("password");

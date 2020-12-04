@@ -1,7 +1,10 @@
-package in.ddarcitects.UserController;
+package in.ddarcitects.controller;
 
+import in.ddarcitects.dao.BlogDao;
 import in.ddarcitects.dao.UserDao;
+import in.ddarcitects.daoImpl.BlogDaoImpl;
 import in.ddarcitects.daoImpl.UserDaoImpl;
+import in.ddarcitects.model.Blog;
 import in.ddarcitects.model.User;
 
 import javax.servlet.ServletException;
@@ -16,6 +19,7 @@ public class HomeController  extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     private UserDao userDao = new UserDaoImpl();
+    private BlogDao blogDao=new BlogDaoImpl();
 
     public HomeController() {
 
@@ -23,9 +27,8 @@ public class HomeController  extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        List<User> users = userDao.findAllUser();
-        req.setAttribute("userList", users);
+        List<Blog> blogs =blogDao.findAllBlog();
+        req.setAttribute("blogs",blogs);
         req.getRequestDispatcher("index.jsp").forward(req,resp);
     }
 

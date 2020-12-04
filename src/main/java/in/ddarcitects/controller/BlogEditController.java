@@ -1,4 +1,4 @@
-package in.ddarcitects.BlogController;
+package in.ddarcitects.controller;
 
 import in.ddarcitects.dao.BlogDao;
 
@@ -64,7 +64,7 @@ public class BlogEditController  extends HttpServlet {
         blog.setFeatureImageUrl(featureImageUrl);
         blog.setBlogDescription(blogDescription);
         blog.setShortText(shortText);
-       // blog.setUserId(userId);
+        blog.setUserId(userId);
         blog.setPublished(isPublished);
 
         blogDao.updateBlog(blog);

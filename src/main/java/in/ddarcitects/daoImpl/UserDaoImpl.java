@@ -4,13 +4,32 @@ import in.ddarcitects.dao.UserDao;
 import in.ddarcitects.model.User;
 import in.ddarcitects.util.DbConnectionUtil;
 
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class UserDaoImpl  implements UserDao {
 
+    public User checkLogin(String email, String password) throws SQLException {
+        DbConnectionUtil dbUtil = new DbConnectionUtil();
+        Connection con = dbUtil.getConnection();
 
+        String query = "SELECT * FROM USER WHERE EMAIL=? AND PASSWORD=?";
+        PreparedStatement ps = con.prepareStatement(query);
+        ps.setString(1,email);
+        ps.setString(2,password);
+
+        ResultSet rs = ps.executeQuery();
+        User user = null;
+        if(rs.next()){
+            user = new User();
+            user.setFirstName(rs.getString("firstNAME"));
+            user.setLastName(rs.getString("lastNAME"));
+        }
+        con.close();
+        return user;
+    }
 
     @Override
     public int saveUser(User user) {
@@ -20,8 +39,8 @@ public class UserDaoImpl  implements UserDao {
             if(con!=null){
                 try{
                     PreparedStatement ps=con.prepareStatement("insert into user(firstName,lastName,email,user_Role,password,isActive) VALUES(?,?,?,?,?,?)");
-                    ps.setString(1,user.getfName());
-                    ps.setString(2,user.getlName());
+                    ps.setString(1,user.getFirstName());
+                    ps.setString(2,user.getLastName());
                     ps.setString(3,user.getEmailId());
                     ps.setString(4,user.getUserRole());
                     ps.setString(5,user.getPassword());
@@ -47,8 +66,8 @@ public class UserDaoImpl  implements UserDao {
         if(con!=null){
             try{
                 PreparedStatement ps=con.prepareStatement("update user set firstName=?,lastName=?,email=?,user_Role=?,password=? where id=?");
-                    ps.setString(1,user.getfName());
-                    ps.setString(2,user.getlName());
+                    ps.setString(1,user.getFirstName());
+                    ps.setString(2,user.getLastName());
                     ps.setString(3,user.getEmailId());
                     ps.setString(4,user.getUserRole());
                     ps.setString(5,user.getPassword());
@@ -106,8 +125,8 @@ public class UserDaoImpl  implements UserDao {
                     if(rs.next()){
 
                         user.setId(rs.getLong(1));
-                        user.setfName(rs.getString(2));
-                        user.setlName(rs.getString(3));
+                        user.setFirstName(rs.getString(2));
+                        user.setLastName(rs.getString(3));
                         user.setEmailId(rs.getString(4));
                         user.setUserRole(rs.getString(5));
                         user.setPassword(rs.getString(6));
