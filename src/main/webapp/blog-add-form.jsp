@@ -87,7 +87,7 @@
 
                                         <option>Select Author</option>
                                         <c:forEach var="user" items="${users}">
-                                        <option value="${user.id}">${user.fName}</option>
+                                        <option value="${user.id}">${user.firstName}</option>
                                     </c:forEach>
                                   </select>
                             </div>
