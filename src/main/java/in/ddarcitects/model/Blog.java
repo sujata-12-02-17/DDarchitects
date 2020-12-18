@@ -1,6 +1,8 @@
 package in.ddarcitects.model;
 
 
+import java.sql.Date;
+
 public class Blog {
     private Long id;
     private String blogTitle;
@@ -9,6 +11,7 @@ public class Blog {
     private String featureImageUrl;
     private Long userId;
     private boolean isPublished;
+    private String creationDate;
 
     public Blog() {
 
@@ -33,13 +36,16 @@ public class Blog {
         this.isPublished = isPublished;
     }
 
-    public Blog(String blogTitle, String shortText, String blogDescription, String featureImageUrl, Long userId, boolean isPublished) {
+
+
+    public Blog(String blogTitle, String shortText, String blogDescription, String na, Long userId, boolean isPublished, String creationDate) {
         this.blogTitle = blogTitle;
         this.shortText = shortText;
         this.blogDescription = blogDescription;
         this.featureImageUrl = featureImageUrl;
         this.userId = userId;
         this.isPublished = isPublished;
+        this.creationDate = creationDate;
     }
 
     public Long getId() {
@@ -96,5 +102,13 @@ public class Blog {
 
     public void setPublished(boolean published) {
         isPublished = published;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
     }
 }
